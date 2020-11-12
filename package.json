@@ -27,7 +27,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "chessground": "^7.9.3"
+    "chess.js": "^0.11.0",
+    "chessground": "7.6.13"
   },
   "peerDependencies": {
     "react": "^16.13.1",
