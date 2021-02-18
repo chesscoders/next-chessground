@@ -41,6 +41,7 @@ const PositionSetup = () => {
       <div className="flex flex-row">
         <div className="w-2/3">
           <ChessGroundEditor
+            side={side}
             fen={initialPosition}
             initial={initialPosition}
             getPosition={getPosition}

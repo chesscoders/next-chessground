@@ -3,7 +3,7 @@ import { Chessground } from 'next-chessground';
 import { SparePieces } from '.';
 import { addPiece } from '../functions';
 
-const ChessGroundEditor = ({ fen, initial, getPosition }) => {
+const ChessGroundEditor = ({ fen, initial, getPosition, side }) => {
   const [selected, setSelected] = useState({ role: null, color: null });
   const [current, setCurrent] = useState(
     'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
@@ -35,7 +35,7 @@ const ChessGroundEditor = ({ fen, initial, getPosition }) => {
     }
   };
   const onMove = () => {
-    setCurrent(ref.current.board.getFen());
+    setCurrent(`${ref.current.board.getFen()} ${side} KQkq - 0 1`);
   };
 
   return (
